@@ -22,24 +22,24 @@ document.getElementById('btn-add').addEventListener('click', function(event){
 
         // Add to transaction history.
 
+        const div = document.createElement('div');
         const h4 = document.createElement('h4');
         const p = document.createElement('p');
-        h4.innerText = 'Add Money';
 
-        h4.style.textAlign = 'center';
-        h4.style.fontWeight = 'bold';
-        h4.style.fontSize = '1.3rem';
+        div.classList.add('bg-lime-400', 'rounded-xl', 'mt-5', 'p-5');
+
+        h4.innerText = 'Add Money';
+       h4.classList.add('text-2xl', 'font-bold', 'text-center');
 
         p.innerText = `Added: ${addMoney} Tk.
         New Balance: ${newBalance}`;
 
-        p.style.fontWeight = 'bold';
-        p.style.fontSize = '1.3rem';
-        p.style.textAlign = 'center';
-        p.style.marginTop = '0.6rem';
+        p.classList.add('text-xl', 'font-bold', 'text-center');
 
-        document.getElementById('transaction-container').appendChild(h4);
-        document.getElementById('transaction-container').appendChild(p);
+        div.appendChild(h4);
+        div.appendChild(p);
+
+        document.getElementById('transaction-container').appendChild(div);
     }
 
     else{

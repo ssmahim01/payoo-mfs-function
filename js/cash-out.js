@@ -29,7 +29,7 @@ document.getElementById('btn-cash-out')
 
             const div = document.createElement('div');
 
-            div.classList.add('text-center');
+            div.classList.add('text-center', 'rounded-xl', 'bg-purple-400', 'p-5');
             div.innerHTML = `
             <h4 class="text-2xl font-bold">Cash Out</h4>
             <p class="text-xl font-bold">Withdraw: ${cashOut} Tk. <br>
